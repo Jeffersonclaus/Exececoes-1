@@ -41,10 +41,41 @@ public class Program {
                     Reservation reservation = new Reservation(number, checkIn, checkOut);
                      
                     System.out.println("Resavation: " + reservation);
-                }
+                    
+                    System.out.println("");
+                  
+                 System.out.println("UPDATE DATES CHECKIN and CHECKOUT");
+                 System.out.print("Check-in date (dd/MM/yyyy): ");
+		 checkIn = sdf.parse(sc.next());
+		 System.out.print("Check-out date (dd/MM/yyyy): ");
+		 checkOut = sdf.parse(sc.next());
+                    
+                   
+               
+	          String reser = reservation.updateDates(checkIn, checkOut);
+                  
+                  if(reser!=null){
+                  
+                      System.out.println("Error in  reservation: " + reser );
+                  } else{
+                  System.out.println("Reservation: " + reservation);
+                  }
+                  
+                            
+                                
+                                
+				
+			}
                 
-              sc.close();
-	}
+                
+     }
+	
+
+
+
+
+     
+}
+     
     
    
-}
